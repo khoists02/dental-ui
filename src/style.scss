@@ -500,3 +500,23 @@ a {
 .fc-event:focus {
   box-shadow: none !important;
 }
+
+.menu-icon {
+  text-align: center;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  margin-top: -17px;
+  font-size: 1.5rem;
+  opacity: .3;
+  transition: color 300ms;
+}
+
+.menu-icon-right {
+  transition: transform 300ms;
+  left: auto;
+  right: 0;
+}

@@ -1,5 +1,6 @@
 import React, { FC } from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
+import { BagDash, ArrowDownShort } from "react-bootstrap-icons"
 
 export const Sidebar: FC = () => {
   return (
@@ -9,23 +10,33 @@ export const Sidebar: FC = () => {
           <ul className="vertical-nav-menu metismenu">
             <li className="mm-active">
               <a href="#">
-                <i className="metismenu-icon pe-7s-rocket"></i>
+                <BagDash className="menu-icon" />
                 Dashboard
-                <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                <ArrowDownShort className="menu-icon menu-icon-right" />
               </a>
               <ul className="mm-collapse mm-show">
                 <li>
-                  <Link to="/Calendar">
+                  <NavLink
+                    to="/Calendar"
+                    className={({ isActive }) => {
+                      return isActive ? "mm-active" : ""
+                    }}
+                  >
                     <i className="metismenu-icon"></i>
                     Calendar
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li>
-                  <Link to="/Settings">
+                  <NavLink
+                    to="/Settings"
+                    className={({ isActive }) => {
+                      return isActive ? "mm-active" : ""
+                    }}
+                  >
                     <i className="metismenu-icon"></i>
                     Settings
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </li>
